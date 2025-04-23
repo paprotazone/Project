@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Strona zawiera formularz dot. doswiadczen uzytk. z mangami, oraz przedstawia moje ulubione mangi">
+    <title>Ulubione Mangi</title>
+    <link rel="stylesheet" href="main.css">
+    <script>
+        function showData() {
+          var Fmanga = document.getElementById('Fmanga').value;
+          var Wmanga = document.getElementById('Wmanga').value;
+          var TCmanga = document.getElementById('TCmanga').value;
+          var JZCmanga = document.getElementById('JZCmanga').value;
+    
+          document.getElementById('FmangaDisplay').textContent = "Najlepsza manga: " + Fmanga;
+          document.getElementById('WmangaDisplay').textContent = "Najgorsza manga: " + Wmanga;
+          document.getElementById('TCmangaDisplay').textContent = "Manga, którą teraz czytasz: " + TCmanga;
+          document.getElementById('JZCmangaDisplay').textContent = "Następna manga do przeczytania: " + JZCmanga;
+        }
+      </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="menu-toggle" id="toggle">
+            ☰ menu
+        </div>
+        <ul id="menu">
+          <li><a href="omnie.html" class="pierwszy">O mnie</a></li>
+          <li><a href="historiaMang.html">Historia mang</a></li>
+          <li><a href="StronaGlowna.html">Strona Główna</a></li>
+          <li><a href="kontakt.html">Formularz kontaktowy</a></li>
+          <li><a href="https://paderek-knurow.pl/" target="_blank">Strona mojej szkoły</a></li>
+        </ul>
+      </nav>
+<script src="skryptnamenu.js"></script>
+<h1>Strona o ulubionych mangach</h1>
+    <form class="formularz1">
+        <fieldset>
+            <legend>czytasz mangi?</legend>
+            <div class="wyglad">
+              <label for="Nieczytam">
+                Nie czytam
+                <input type="radio" name="czytanie" id="Nieczytam" value="NieCzyt">
+              </label>
+              <label for="czytam">
+                czytam
+                <input type="radio" name="czytanie" id="czytam" value="Czyt">
+              </label>
+            </div>
+          </fieldset>
+          
+          <div id="mangaFields" style="display: none;">
+            <fieldset>
+              <legend>mangi:</legend>
+              <div class="wyglad">
+                <label for="Fmanga">Najlepsza manga jaką przeczytałeś:
+                  <input type="text" name="Fmanga" id="Fmanga">
+                </label>
+                <label for="Wmanga">Najgorsza manga jaką przeczytałeś:
+                  <input type="text" name="Wmanga" id="Wmanga">
+                </label>
+                <label for="TCmanga">Manga, którą teraz czytasz:
+                  <input type="text" name="TCmanga" id="TCmanga">
+                </label>
+                <label for="JZCmanga">Jaką mangę zamierzasz czytać następną?
+                  <input type="text" name="JZCmanga" id="JZCmanga">
+                </label>
+                <button type="button" onclick="showData()" id="buttonform">Pokaż dane</button>
+              </div>
+              <div>
+                <h3>Podsumowanie danych:</h3>
+                <p id="FmangaDisplay"></p>
+                <p id="WmangaDisplay"></p>
+                <p id="TCmangaDisplay"></p>
+                <p id="JZCmangaDisplay"></p>
+              </div>
+            </fieldset>
+          </div>
+    </form>
+    <hr>
+    <h2>Moje Ulubione Mangi (Top 5)</h2>
+    <h3>1. Solo leveling</h3>
+    <p class="ulma">Solo Leveling to popularna koreańska manga (manhwa) oparta na powieści internetowej autorstwa Chugonga.
+        Opowiada historię Sung Jin-Woo, najniżej postrzeganego "Łowcy" w świecie, gdzie ludzie zdobywają moce,
+        walcząc z potworami w tajemniczych lochach.</p>
+    <div class="zdjecie">
+        <img src="obrazy/ob1.jpg" alt="">
+        <img src="obrazy/ob2.jpg" alt="">
+    </div>
+    <h3>2. Overlord</h3>
+    <p class="ulma">Overlord to japońska light novel, która została zaadaptowana na manga i anime. Fabuła skupia się na grze VRMMORPG,
+        w której główny bohater, Suzuki Satoru zostaje w grze po jej zamknięciu. Zamiast wylogować się, zostaje w wirtualnym świecie,
+        który staje się jego nową rzeczywistością.</p>
+    <div class="zdjecie">
+        <img src="obrazy/ob3.jpg" alt="">
+        <img src="obrazy/ob4.jpg" alt="">
+    </div>
+    <h3>3. Haikyuu!</h3>
+    <p class="ulma">Haikyuu! to manga sportowa, która śledzi losy drużyny siatkówki w szkole średniej Karasuno. Główny bohater,
+        Hinata Shoyo, marzy o zostaniu wielkim siatkarzem, mimo że jest niski. Razem z nowym kolegą, Kageyamą, stara się doprowadzić
+        drużynę do mistrzostwa, pokonując liczne trudności i rywali. Manga skupia się na pasji, rywalizacji i rozwoju bohaterów.</p>
+    <div class="zdjecie">
+        <img src="obrazy/ob5.jpg" alt="">
+        <img src="obrazy/ob6.jpg" alt="">
+    </div>
+    <h3>4. The beginning after the end</h3>
+    <p class="ulma">The Beginning After the End to manga fantasy, która opowiada historię króla Arthur'a Leywin'a,
+        który reinkarnuje się w nowym świecie po śmierci w poprzednim. Choć zaczyna jako dziecko, posiada ogromną
+        wiedzę i umiejętności z poprzedniego życia. W nowym świecie pełnym magii, potworów i politycznych intryg,
+        Arthur stara się znaleźć swoje miejsce, jednocześnie chroniąc bliskich i dążąc do odkrycia sekretów swojej przeszłości.</p>
+
+    <div class="zdjecie">
+        <img src="obrazy/ob7.jpg" alt="">
+        <img src="obrazy/ob8.jpg" alt="">
+    </div>
+    <h3>5. The omniscient reader's viewpoint</h3>
+    <p class="ulma">Omniscient Reader's Viewpoint to koreańska manhwa, która śledzi historię Kim Dokja, zwykłego mężczyzny,
+        który jako jedyny zna fabułę apokaliptycznej powieści, którą przez lata czytał. Kiedy świat zaczyna zmieniać się
+        zgodnie z wydarzeniami z książki, Dokja staje się kluczowym graczem w grze o przetrwanie, wykorzystując swoją wiedzę
+        o przyszłości, by chronić siebie i innych</p>
+    <div class="zdjecie">
+        <img src="obrazy/ob9.jpg" alt="">
+        <img src="obrazy/ob10.jpg" alt="">
+    </div> 
+
+
+    <footer class="footer">
+      <h2>Strona Tomasza</h2>
+      <p>&copy;Tomasz Paprocki 2025r. (wszystkie prawa zastrzeżone)</p>
+      <p>
+          <a href="https://open.spotify.com/user/21w4srigvfhgy6ooozgqin6ha?si=c114542855f24c18" target="_blank">Spotify</a>
+          <a href="https://www.roblox.com/users/876497187/profile" target="_blank">Roblox</a>
+          <a href="https://images6.alphacoders.com/129/1293436.jpg" target="_blank">Goat</a>
+      </p>
+  </footer>
+    <script src="skryptnamangi.js"></script>
+</body>
+</html>

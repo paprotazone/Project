@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Strona służy do wymiany danych kontaktowych">
+    <title>Formularz Kontaktowy</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="menu-toggle" id="toggle">
+          ☰
+        </div>
+        <ul id="menu">
+          <li><a href="omnie.html">O mnie</a></li>
+          <li><a href="historiaMang.html">Historia mang</a></li>
+          <li><a href="UlubioneMangi.html">Moje ulubione mangi</a></li>
+          <li><a href="StronaGlowna.html">Strona Główna</a></li>
+          <li><a href="https://paderek-knurow.pl/" target="_blank">Strona mojej szkoły</a></li>
+        </ul>
+      </nav>
+<script src="skryptnamenu.js"></script>
+<div class="container-display">
+<div class="kontakt">
+<form action="#" id="form">
+  <fieldset class="fk">
+    <legend>Formularz kontaktowy:</legend>
+    <label for="imie" class="fk">Imię i nazwisko </label><input type="text" name="imie" id="imie">
+    <label for="email" class="fk">Email </label><input type="email" name="email" id="email">
+    <label for="phone" class="fk">Nr. Telefonu </label><input type="tel" name="phone" id="phone" pattern="\d{3} \d{3} \d{3}" placeholder="np. 123 456 789">
+    <label for="Age" class="fk">Wiek </label><input type="number" name="Age" id="Age">
+    <label for="Miasto" class="fk">Miasto, w którym mieszkasz </label><input type="text" name="Miasto" id="Miasto">
+    <div class="submit">  <button type="submit" class="submit">wyślij</button></div>
+
+  </fieldset>
+</form>
+</div>
+
+  <hr>
+</div>
+
+
+  <main class="fk">
+    <div id="result"></div>
+    <h2>Moje dane kontaktowe:</h2>
+    <p>Tomasz Paprocki, xyz@gmail.com, +48 123 456 789, mam 17 lat, oraz mieszkam w Gliwicach.
+    </p>
+  </main>
+
+  <script>
+    document.getElementById('form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  const imie = document.getElementById('imie').value;
+  const email = document.getElementById('email').value;
+  const phone = document.getElementById('phone').value;
+  const age = document.getElementById('Age').value;
+  const miasto = document.getElementById('Miasto').value;
+  
+  const wynik = 
+      `<h2>Wysłane dane to: (jeżeli są błedne to proszę o poprawę.) </h2>
+       <p><strong>imie: ${imie}, email: ${email}, nr. telefonu: ${phone}, wiek: ${age}, a miejsce zamieszkania: ${miasto}`
+  ;
+  document.getElementById('result').innerHTML = wynik;
+  });w
+  
+  </script>
+<footer class="footer">
+  <h2>Strona Tomasza</h2>
+  <p>&copy;Tomasz Paprocki 2025r. (wszystkie prawa zastrzeżone)</p>
+  <p>
+      <a href="https://open.spotify.com/user/21w4srigvfhgy6ooozgqin6ha?si=c114542855f24c18" target="_blank">Spotify</a>
+      <a href="https://www.roblox.com/users/876497187/profile" target="_blank">Roblox</a>
+      <a href="https://images6.alphacoders.com/129/1293436.jpg" target="_blank">Goat</a>
+  </p>
+</footer>
+</body>
+</html>
